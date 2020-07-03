@@ -9,11 +9,11 @@ namespace lesson6.vstepanov
         static void Main(string[] args)
         {
             //Task1();
-            Task2();
+            //Task2();
             //Task3();
             //Task4();
             //Task5();
-            //Task6();
+            Task6();
             //Task7();
             //Task8();
             //Task9();
@@ -53,9 +53,9 @@ namespace lesson6.vstepanov
         {
             int[] a = new int[] { 245, 400, 700, 5, 12, 13, 2, 1, 9, 15, 19, 850 };
 
-            int maxValue1 = a[0];
+            int maxValue1 = a[0]; //задаем первую переменную и приравниваем её в первому значению в массиве
 
-            for (int i = 1; i < a.Length; i++)
+            for (int i = 1; i < a.Length; i++) //начиная со второго значения перебираем массив до тех пор. пока не найдем макс значение
             {
                 if (a[i] > maxValue1)
                 {
@@ -63,14 +63,14 @@ namespace lesson6.vstepanov
                 }
             }
 
-            int maxValue2 = a[0];
+            int maxValue2 = a[0]; // задаем вторую переменную максимум которой будем искать
 
-            for (int i = 0; i < a.Length; i++)
+            for (int i = 1; i < a.Length; i++)
             {
 
-                if (a[i] > maxValue2)
+                if (a[i] > maxValue2) //аналогично перебираем
                 {
-                    if (a[i] == maxValue1)
+                    if (a[i] == maxValue1) //если значение равно макс1 пропускаем, иначе присваиваем новое значение. Т.о. исключаем макс1
                         continue;
                     maxValue2 = a[i];
                 }
@@ -115,9 +115,9 @@ namespace lesson6.vstepanov
             int n = 100;
             int[] a = new int[n];
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)//возможно решить 2-ся путями. 1- через прибавление единицы в цикле. 2. через вычитание 1 из i в цикле, i растет само, так как есть инкремент
             {
-                a[i] = i + 1; 
+                a[i] = i+1; 
             }
 
             for (int i = 0; i < n; i++)
@@ -141,10 +141,32 @@ namespace lesson6.vstepanov
                 Random rnd = new Random();
                 int r = rnd.Next(1, n);//случайное число от 1 до ...
 
-                if (i < n)
+                if (i < n) // использовал условия для проверки, но по факту усложнил, так как крайнее значение n не берется. Можно было отказаться от него, так как крайнее значение и так возьмется через инкремент 
                 {
                     a[i] = r;
                 }
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
+
+            Console.ReadLine();
+
+        }
+
+        public static void Task5v2()
+        {
+            //пример вызова генератора случайных чисел, он понадобится в данной задаче
+            int n = 10;
+
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                Random rnd = new Random();
+                int r = rnd.Next(1, n);//случайное число от 1 до ...
+                    a[i] = r;
             }
 
             for (int i = 0; i < n; i++)
@@ -161,7 +183,7 @@ namespace lesson6.vstepanov
         /// </summary>
         public static void Task6()
         {
-            int[] a = new int[] {5, 12, 13, 2, 1, 9, 15, 19, 6 };
+            int[] a = new int[] {5, 15, 13, 2, 1, 9, 15, 19, 6 };
 
             //с сортировкой массива и дальнейшим сравнением соседних элементов
 
@@ -196,7 +218,7 @@ namespace lesson6.vstepanov
             //    if (a[i] == a[i + 1] && a[i] != temp2)
             //    {
             //        temp2 = a[i];
-            //        Console.WriteLine(a[i] + " ");
+            //        Console.WriteLine(a[i] + "Одинаковые числа");
             //    }
             //    else
             //    {
@@ -208,6 +230,15 @@ namespace lesson6.vstepanov
 
             //цикл в цикле
 
+            bool result = false;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                for (int j = 1; j < a.Length; j++)
+                {
+
+                }
+            }
 
 
         }
