@@ -16,8 +16,8 @@ namespace lesson6.vstepanov
             //Task6();
             //Task7();
             //Task8();
-            Task9();
-            //Task10();
+            //Task9();
+            Task10();
             //Task11();
             //Task12();
         }
@@ -356,7 +356,7 @@ namespace lesson6.vstepanov
         {
             //объявление массива и его размерности
             int p = 10;
-            int n = 9;
+            int n = 100;
             int [,] Mass = new int[p,p];
 
             //заполнение массива
