@@ -13,8 +13,8 @@ namespace lesson6.vstepanov
             //Task3();
             //Task4();
             //Task5();
-            Task6();
-            //Task7();
+            //Task6();
+            Task7();
             //Task8();
             //Task9();
             //Task10();
@@ -258,17 +258,21 @@ namespace lesson6.vstepanov
         {
             int[] a = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
             int[] b = new int[a.Length];
-            int j = 0;
+            //int j = 0; //вариант с чтением массива с конца и записью данных в начало. При этом инткремент второго массива в рамках цикла
 
-            for (int i = a.Length - 1; i >= 0; i--)
+            //for (int i = a.Length - 1; i >= 0; i--)
+            //{
+            //    b[j] = a[i];
+            //    Console.Write($"{b[j]} ");
+            //    j++;
+            //}
+            //Console.ReadLine();
+
+            for (int i = 0; i < a.Length; i++) //вариант чтения с начала и записью в конец
             {
-                b[j] = a[i];
-                Console.Write($"{b[j]} ");
-                j++;
+                b[a.Length - i - 1] = a[i];
             }
 
-
-            Console.ReadLine();
         }
 
         /// <summary>
