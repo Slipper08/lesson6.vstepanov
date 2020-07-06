@@ -183,7 +183,7 @@ namespace lesson6.vstepanov
         /// </summary>
         public static void Task6()
         {
-            int[] a = new int[] {5, 15, 13, 2, 1, 9, 15, 19, 6 };
+            int[] a = new int[] {15, 5, 13, 2, 1, 9, 15, 19, 6 };
 
             //с сортировкой массива и дальнейшим сравнением соседних элементов
 
@@ -234,13 +234,21 @@ namespace lesson6.vstepanov
 
             for (int i = 0; i < a.Length; i++)
             {
-                for (int j = 1; j < a.Length; j++)
+                for (int j = i+1; j < a.Length; j++)
                 {
-
+                    if (a[i] == a[j])
+                    {
+                        result = true;
+                        break;
+                    }
+                }
+                if (result)
+                {
+                    break;
                 }
             }
 
-
+            Console.WriteLine(result);
         }
 
         /// <summary>
