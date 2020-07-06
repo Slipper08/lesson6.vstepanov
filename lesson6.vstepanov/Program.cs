@@ -14,8 +14,8 @@ namespace lesson6.vstepanov
             //Task4();
             //Task5();
             //Task6();
-            Task7();
-            //Task8();
+            //Task7();
+            Task8();
             //Task9();
             //Task10();
             //Task11();
@@ -282,14 +282,25 @@ namespace lesson6.vstepanov
         {
             int[] a = new int[] { 5, 12, 13, 2, 1, 9, 15, 19, 6 };
 
-            Console.WriteLine("Вывод развернутого массива (при помощи цикла for):");
+            //Console.WriteLine("Вывод развернутого массива (при помощи цикла for):");
 
-            for (int i = a.Length - 1; i >= 0; i--)
+            //for (int i = a.Length - 1; i >= 0; i--)
+            //{
+            //    Console.Write($"{a[i]} ");
+            //}
+
+            //Console.ReadLine();
+
+            //второй вариант. Решение через одновременное переставление крайних значение массива
+
+            for (int i = 0; i < a.Length / 2; i++)
             {
-                Console.Write($"{a[i]} ");
+                int t = a[i];
+                a[i] = a[a.Length-1-i];
+                a[a.Length-1-i] = t;
             }
 
-            Console.ReadLine();
+
         }
 
         /// <summary>
