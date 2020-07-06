@@ -19,7 +19,8 @@ namespace lesson6.vstepanov
             //Task9();
             //Task10();
             //Task11();
-            Task12();
+            //Task12();
+            Task13();
         }
 
         /// <summary>
@@ -500,6 +501,26 @@ namespace lesson6.vstepanov
 
             Console.WriteLine();
             Console.WriteLine($"Всего четных чисел: {count}");
+        }
+
+        /// <summary>Скопировать одномерный массив в массиво размерностью 4*4</summary>
+        /// 
+        public static void Task13()
+        {
+            int size = 4;
+            int[] m = new int[] { 11, 22, 31, 4, 53, 6, 7, 81, 90, 11, 22, 31, 4, 53, 12, 7};
+            int[,] n = new int [size, size];
+
+            int k = 0;
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    n[i, j] = m[k];
+                    k++;
+                }
+            }
+
         }
     }
 }
