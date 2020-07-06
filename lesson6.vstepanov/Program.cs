@@ -18,8 +18,8 @@ namespace lesson6.vstepanov
             //Task8();
             //Task9();
             //Task10();
-            Task11();
-            //Task12();
+            //Task11();
+            Task12();
         }
 
         /// <summary>
@@ -408,25 +408,39 @@ namespace lesson6.vstepanov
             };
             int[] n = new int[m.Length];
 
-            for (int i = 0; i < 3; i++)//не ясно как находить размерность массива по осям и объявлять их в виде условия. Пишу руками в теле условия
+            int columns = m.GetUpperBound(0) + 1;
+            int rows = m.Length / columns;
+
+            int k = 0; //вводим счетчик с целью продвижения по одномерному массиву
+            for (int i = 0; i < columns; i++)
             {
-                for (int j = 0; j < 3; j++)
+                for (int j = 0; j < rows; j++)
                 {
-                    n[i * 3 + j] = m[i, j];
+                    n [k]= m[i, j];
+                    k++;
                 }
+
             }
 
-            //вывод массива
-            Console.WriteLine("Одномерный массив");
-            for (int i = 0; i < 3; i++)//не ясно как находить размерность массива по осям и объявлять их в виде условия
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.Write($"{n[i*3+j]}\t");
-                }
-            }
+            //for (int i = 0; i < 3; i++)//не ясно как находить размерность массива по осям и объявлять их в виде условия. Пишу руками в теле условия
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        n[i * 3 + j] = m[i, j];
+            //    }
+            //}
 
-            Console.ReadLine();
+            ////вывод массива
+            //Console.WriteLine("Одномерный массив");
+            //for (int i = 0; i < 3; i++)//не ясно как находить размерность массива по осям и объявлять их в виде условия
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Console.Write($"{n[i*3+j]}\t");
+            //    }
+            //}
+
+            //Console.ReadLine();
         }
 
 
