@@ -15,8 +15,8 @@ namespace lesson6.vstepanov
             //Task5();
             //Task6();
             //Task7();
-            Task8();
-            //Task9();
+            //Task8();
+            Task9();
             //Task10();
             //Task11();
             //Task12();
@@ -319,17 +319,17 @@ namespace lesson6.vstepanov
 
             int Sum = 0;
 
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Sum = Sum + m[i, j];
-                }
-            }
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Sum = Sum + m[i, j];
+            //    }
+            //}
 
-            Console.WriteLine($"Сумма массива равна: {Sum}");
+            //Console.WriteLine($"Сумма массива равна: {Sum}");
 
-            Console.ReadLine();
+            //Console.ReadLine();
 
         }
 
