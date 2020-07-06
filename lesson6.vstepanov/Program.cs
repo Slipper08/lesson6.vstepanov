@@ -17,8 +17,8 @@ namespace lesson6.vstepanov
             //Task7();
             //Task8();
             //Task9();
-            Task10();
-            //Task11();
+            //Task10();
+            Task11();
             //Task12();
         }
 
