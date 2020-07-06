@@ -319,6 +319,22 @@ namespace lesson6.vstepanov
 
             int Sum = 0;
 
+            int columns = m.GetUpperBound(0)+1;
+            int rows = m.Length / columns;
+
+            for (int i = 0; i < columns; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    Sum += m[i, j];
+                }
+
+            }
+
+            Console.WriteLine(Sum);
+
+            Console.ReadLine();
+
             //for (int i = 0; i < 3; i++)
             //{
             //    for (int j = 0; j < 3; j++)
